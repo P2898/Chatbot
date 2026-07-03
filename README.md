@@ -18,21 +18,19 @@ Required Python Packages
 Depending on which version of the app you run, you will need to install specific dependencies.
 
 For the OpenAI version:
-
 bash
-
 pip install openai python-dotenv streamlit
+
 For the Hugging Face version:
-
 bash
-
 pip install transformers torch streamlit
+
 Required Node Packages
 For exposing the app to the internet:
 
 bash
-
 npm install -g localtunnel
+
 1. OpenAI Chatbot (app_openai.py)
 This version connects to the OpenAI API (using gpt-4o-mini) to generate responses.
 
@@ -43,18 +41,19 @@ env
 
 OPENAI_API_KEY=your_actual_api_key_here
 (If using Jupyter Notebook) The code is available to automatically generate app_openai.py.
+
 Run the Streamlit application:
 bash
-
 streamlit run app_openai.py
+
 2. Local Open-Source Chatbot (app_huggingface.py)
 This version runs a local LLM (microsoft/Phi-4-mini-instruct) using the Hugging Face Transformers library. Note: A GPU is highly recommended for running this model efficiently.
 
 Setup
 (If using Jupyter Notebook) The code is available to automatically generate app_huggingface.py.
+
 Run the Streamlit application:
 bash
-
 streamlit run app_huggingface.py
 (Note: If you run into Hugging Face token warnings, you can optionally authenticate your environment using a Hugging Face token).
 
@@ -66,7 +65,8 @@ bash
 
 curl ipv4.icanhazip.com
 Start the tunnel on the Streamlit port:
-bash
 
+bash
 npx localtunnel --port 8501
+
 Visit the URL provided by localtunnel, and enter the IP address you found in step 1.
